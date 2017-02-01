@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ScoreKeeper</string>
+    <string name="teamA">TeamA</string>
+    <string name="teamB">TeamB</string>
+    <string name="scoreTeamA">0</string>
+    <string name="scoreTeamB">0</string>
+    <string name="penaltyTeam">penalty</string>
+    <string name="scorePenaltyA">0</string>
+    <string name="scorePenaltyB">0</string>
+    <string name="faultTeam">fault</string>
+    <string name="scoreFaultA">0</string>
+    <string name="scoreFaultB">0</string>
+    <string name="cornerTeam">corner</string>
+    <string name="scoreCornerA">0</string>
+    <string name="scoreCornerB">0</string>
+    <string name="goalTeam">goal!!!</string>
+    <string name="yellowCardTeam">yel-card</string>
+    <string name="redCardTeam">red-card</string>
+    <string name="scoreYellowCardA">0</string>
+    <string name="scoreYellowCardB">0</string>
+    <string name="scoreRedCardA">0</string>
+    <string name="scoreRedCardB">0</string>
+    <string name="desc">banner</string>
+    <string name="reset">reset</string>
+
+</resources>

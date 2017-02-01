@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar.ScoreKeeper">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@android:color/primary_text_dark</item>
+
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.ScoreKeeper" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="colorAccent">@android:color/holo_blue_bright</item>
+        <!-- Background color of buttons in the app -->
+        <item name="colorButtonNormal">#424242</item>
+    </style>
+
+</resources>
