@@ -3,12 +3,17 @@ package com.example.android.scorekeeper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    /**
+     * Define a String Variable for storing User Input
+     */
 
     int scoreCornerA = 0;
     int scoreCornerB = 0;
@@ -27,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String userInputText="";
+        //Define myEditableText TeamA and TeamB
+        EditText myTeamA = (EditText) findViewById(R.id.TeamA);
+        EditText myTeamB = (EditText) findViewById(R.id.TeamB);
+        //get myEditableText() input and convert it to string, store on userInputText
+        userInputText = myTeamA.getText().toString();
+        userInputText = myTeamB.getText().toString();
     }
 
     /**

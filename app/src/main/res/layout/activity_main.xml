@@ -6,387 +6,243 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.scorekeeper.MainActivity">
 
-    <!-- own title bar -->
-
-    <TextView
-        android:id="@+id/appname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/football_banner"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textColor="@android:color/black"
-        android:textSize="64sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:contentDescription="@string/desc"
-        android:src="@drawable/icone_ballon" />
-
-    <!-- main GroupView -->
+    <!--header-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <!-- GroupView TeamA col -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/football_banner" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingLeft="@dimen/padding8"
-            android:paddingStart="@dimen/padding8">
+            android:orientation="horizontal">
 
-            <TextView
+            <EditText
                 android:id="@+id/TeamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/teamA"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:hint="@string/teamA"
+                android:textColorHint="@android:color/darker_gray"
                 android:textSize="@dimen/Text_size_team" />
 
-            <!-- goal row-->
+            <EditText
+                android:id="@+id/TeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:hint="@string/teamB"
+                android:text="@string/teamB"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/Text_size_team" />
+        </LinearLayout>
+
+        <!-- first col button TeamA-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addGoalTeamA"
                     android:text="@string/goalTeam" />
 
-                <TextView
-                    android:id="@+id/scoreTeamA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/padding8"
-                    android:paddingStart="@dimen/padding8"
-                    android:text="@string/scoreTeamA"
-                    android:textSize="@dimen/Text_size_goal" />
-
-            </LinearLayout>
-
-            <!-- penalty row -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
-                android:orientation="horizontal">
-
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addPenaltyTeamA"
                     android:text="@string/penaltyTeam" />
 
-                <TextView
-                    android:id="@+id/scorePenaltyA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/padding8"
-                    android:paddingStart="@dimen/padding8"
-                    android:text="@string/scorePenaltyA"
-                    android:textSize="@dimen/Text_size_goal" />
-
-            </LinearLayout>
-
-            <!-- corner row -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
-                android:orientation="horizontal">
-
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addCornerTeamA"
                     android:text="@string/cornerTeam" />
 
-                <TextView
-                    android:id="@+id/scoreCornerA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/padding8"
-                    android:paddingStart="@dimen/padding8"
-                    android:text="@string/scoreCornerA"
-                    android:textSize="@dimen/Text_size_goal" />
-
-            </LinearLayout>
-
-            <!-- fault row -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
-                android:orientation="horizontal">
-
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addFaultTeamA"
                     android:text="@string/faultTeam" />
 
-                <TextView
-                    android:id="@+id/scoreFaultA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/padding8"
-                    android:paddingStart="@dimen/padding8"
-                    android:text="@string/scoreFaultA"
-                    android:textSize="@dimen/Text_size_goal" />
-
-            </LinearLayout>
-
-            <!-- redcard row -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
-                android:orientation="horizontal">
-
-
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addRedCardTeamA"
                     android:text="@string/redCardTeam" />
 
-                <TextView
-                    android:id="@+id/scoreRedCardTeamA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/padding8"
-                    android:paddingStart="@dimen/padding8"
-                    android:text="@string/scoreRedCardA"
-                    android:textSize="@dimen/Text_size_goal" />
-
-            </LinearLayout>
-
-            <!-- yellowcard row -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
-                android:orientation="horizontal">
-
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addYellowCardTeamA"
                     android:text="@string/yellowCardTeam" />
 
+            </LinearLayout>
+
+            <!--second col score TeamA-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/scoreTeamA"
+                    style="@style/ScoreCol"
+                    android:text="@string/scoreTeamA"
+                    android:textSize="@dimen/Text_size_goal" />
+
+                <TextView
+                    android:id="@+id/scorePenaltyA"
+                    style="@style/ScoreCol"
+                    android:text="@string/scorePenaltyA"
+                    android:textSize="@dimen/Text_size_goal" />
+
+                <TextView
+                    android:id="@+id/scoreCornerA"
+                    style="@style/ScoreCol"
+                    android:text="@string/scoreCornerA"
+                    android:textSize="@dimen/Text_size_goal" />
+
+                <TextView
+                    android:id="@+id/scoreFaultA"
+                    style="@style/ScoreCol"
+                    android:text="@string/scoreFaultA"
+                    android:textSize="@dimen/Text_size_goal" />
+
+                <TextView
+                    android:id="@+id/scoreRedCardTeamA"
+                    style="@style/ScoreCol"
+                    android:text="@string/scoreRedCardA"
+                    android:textSize="@dimen/Text_size_goal" />
+
                 <TextView
                     android:id="@+id/scoreYellowCardTeamA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/padding8"
-                    android:paddingStart="@dimen/padding8"
+                    style="@style/ScoreCol"
                     android:text="@string/scoreYellowCardA"
                     android:textSize="@dimen/Text_size_goal" />
 
             </LinearLayout>
 
-
-        </LinearLayout>
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/black" />
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/black" />
 
 
-        <!-- GroupView TeamB col -->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingLeft="@dimen/padding64"
-            android:paddingStart="@dimen/padding64">
-
-            <TextView
-                android:id="@+id/TeamB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/teamB"
-                android:textSize="@dimen/Text_size_team" />
-
-            <!-- goal row-->
+            <!--third col score TeamB-->
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/scoreTeamB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingEnd="@dimen/padding8"
-                    android:paddingRight="@dimen/padding8"
+                    style="@style/ScoreCol"
                     android:text="@string/scoreTeamB"
                     android:textSize="@dimen/Text_size_goal" />
 
+                <TextView
+                    android:id="@+id/scorePenaltyB"
+                    style="@style/ScoreCol"
+                    android:text="@string/scorePenaltyB"
+                    android:textSize="@dimen/Text_size_goal" />
+
+                <TextView
+                    android:id="@+id/scoreCornerB"
+                    style="@style/ScoreCol"
+                    android:text="@string/scoreCornerB"
+                    android:textSize="@dimen/Text_size_goal" />
+
+                <TextView
+                    android:id="@+id/scoreFaultB"
+                    style="@style/ScoreCol"
+                    android:text="@string/scoreFaultB"
+                    android:textSize="@dimen/Text_size_goal" />
+
+                <TextView
+                    android:id="@+id/scoreRedCardTeamB"
+                    style="@style/ScoreCol"
+                    android:text="@string/scoreRedCardB"
+                    android:textSize="@dimen/Text_size_goal" />
+
+                <TextView
+                    android:id="@+id/scoreYellowCardTeamB"
+                    style="@style/ScoreCol"
+                    android:text="@string/scoreYellowCardB"
+                    android:textSize="@dimen/Text_size_goal" />
+
+            </LinearLayout>
+
+            <!--fourth col-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addGoalTeamB"
                     android:text="@string/goalTeam" />
 
-
-            </LinearLayout>
-
-            <!-- penalty row -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/scorePenaltyB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingEnd="@dimen/padding8"
-                    android:paddingRight="@dimen/padding8"
-                    android:text="@string/scorePenaltyB"
-                    android:textSize="@dimen/Text_size_goal" />
-
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addPenaltyTeamB"
                     android:text="@string/penaltyTeam" />
 
-
-            </LinearLayout>
-
-            <!-- corner row -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/scoreCornerB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingEnd="@dimen/padding8"
-                    android:paddingRight="@dimen/padding8"
-                    android:text="@string/scoreCornerB"
-                    android:textSize="@dimen/Text_size_goal" />
-
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addCornerTeamB"
                     android:text="@string/cornerTeam" />
 
-
-            </LinearLayout>
-
-            <!-- fault row -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/scoreFaultB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingEnd="@dimen/padding8"
-                    android:paddingRight="@dimen/padding8"
-                    android:text="@string/scoreFaultB"
-                    android:textSize="@dimen/Text_size_goal" />
-
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addFaultTeamB"
                     android:text="@string/faultTeam" />
 
-
-            </LinearLayout>
-
-            <!-- redcard row -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/scoreRedCardTeamB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingEnd="@dimen/padding8"
-                    android:paddingRight="@dimen/padding8"
-                    android:text="@string/scoreRedCardB"
-                    android:textSize="@dimen/Text_size_goal" />
-
-
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addRedCardTeamB"
                     android:text="@string/redCardTeam" />
 
-
-            </LinearLayout>
-
-            <!-- yellowcard row -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/scoreYellowCardTeamB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingEnd="@dimen/padding8"
-                    android:paddingRight="@dimen/padding8"
-                    android:text="@string/scoreYellowCardB"
-                    android:textSize="@dimen/Text_size_goal" />
-
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addYellowCardTeamB"
                     android:text="@string/yellowCardTeam" />
 
-
             </LinearLayout>
-
 
         </LinearLayout>
 
@@ -400,6 +256,24 @@
         android:onClick="resetAllScore"
         android:layout_marginBottom="@dimen/margin_vertical_col"
         android:text="@string/reset" />
+
+    <TextView
+        android:id="@+id/appname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="64sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/icone_ballon" />
 
 
 </RelativeLayout>
