@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.scorekeeper.MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/desc"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic" />
+
     <!--header-->
 
     <LinearLayout
@@ -27,7 +34,7 @@
                 style="@style/ScoreCol"
                 android:layout_weight="1"
                 android:hint="@string/teamA"
-                android:textColorHint="@android:color/darker_gray"
+                android:textColorHint="#546E7A"
                 android:textSize="@dimen/Text_size_team" />
 
             <EditText
@@ -35,7 +42,7 @@
                 style="@style/ScoreCol"
                 android:layout_weight="1"
                 android:hint="@string/teamB"
-                android:textColorHint="@android:color/darker_gray"
+                android:textColorHint="#546E7A"
                 android:textSize="@dimen/Text_size_team" />
         </LinearLayout>
 
@@ -51,32 +58,32 @@
                 android:orientation="vertical">
 
                 <Button
-                    style="@style/LayoutDefault"
+                    style="@style/LayoutButton"
                     android:onClick="addGoalTeamA"
                     android:text="@string/goalTeam" />
 
                 <Button
-                    style="@style/LayoutDefault"
+                    style="@style/LayoutButton"
                     android:onClick="addPenaltyTeamA"
                     android:text="@string/penaltyTeam" />
 
                 <Button
-                    style="@style/LayoutDefault"
+                    style="@style/LayoutButton"
                     android:onClick="addCornerTeamA"
                     android:text="@string/cornerTeam" />
 
                 <Button
-                    style="@style/LayoutDefault"
+                    style="@style/LayoutButton"
                     android:onClick="addFaultTeamA"
                     android:text="@string/faultTeam" />
 
                 <Button
-                    style="@style/LayoutDefault"
+                    style="@style/LayoutButton"
                     android:onClick="addRedCardTeamA"
                     android:text="@string/redCardTeam" />
 
                 <Button
-                    style="@style/LayoutDefault"
+                    style="@style/LayoutButton"
                     android:onClick="addYellowCardTeamA"
                     android:text="@string/yellowCardTeam" />
 
@@ -92,38 +99,32 @@
                 <TextView
                     android:id="@+id/scoreTeamA"
                     style="@style/ScoreCol"
-                    android:text="@string/scoreTeamA"
-                    android:textSize="@dimen/Text_size_goal" />
+                    android:text="@string/scoreTeamA" />
 
                 <TextView
                     android:id="@+id/scorePenaltyA"
                     style="@style/ScoreCol"
-                    android:text="@string/scorePenaltyA"
-                    android:textSize="@dimen/Text_size_goal" />
+                    android:text="@string/scorePenaltyA" />
 
                 <TextView
                     android:id="@+id/scoreCornerA"
                     style="@style/ScoreCol"
-                    android:text="@string/scoreCornerA"
-                    android:textSize="@dimen/Text_size_goal" />
+                    android:text="@string/scoreCornerA" />
 
                 <TextView
                     android:id="@+id/scoreFaultA"
                     style="@style/ScoreCol"
-                    android:text="@string/scoreFaultA"
-                    android:textSize="@dimen/Text_size_goal" />
+                    android:text="@string/scoreFaultA" />
 
                 <TextView
                     android:id="@+id/scoreRedCardTeamA"
                     style="@style/ScoreCol"
-                    android:text="@string/scoreRedCardA"
-                    android:textSize="@dimen/Text_size_goal" />
+                    android:text="@string/scoreRedCardA" />
 
                 <TextView
                     android:id="@+id/scoreYellowCardTeamA"
                     style="@style/ScoreCol"
-                    android:text="@string/scoreYellowCardA"
-                    android:textSize="@dimen/Text_size_goal" />
+                    android:text="@string/scoreYellowCardA" />
 
             </LinearLayout>
 
@@ -144,38 +145,32 @@
                 <TextView
                     android:id="@+id/scoreTeamB"
                     style="@style/ScoreCol"
-                    android:text="@string/scoreTeamB"
-                    android:textSize="@dimen/Text_size_goal" />
+                    android:text="@string/scoreTeamB" />
 
                 <TextView
                     android:id="@+id/scorePenaltyB"
                     style="@style/ScoreCol"
-                    android:text="@string/scorePenaltyB"
-                    android:textSize="@dimen/Text_size_goal" />
+                    android:text="@string/scorePenaltyB" />
 
                 <TextView
                     android:id="@+id/scoreCornerB"
                     style="@style/ScoreCol"
-                    android:text="@string/scoreCornerB"
-                    android:textSize="@dimen/Text_size_goal" />
+                    android:text="@string/scoreCornerB" />
 
                 <TextView
                     android:id="@+id/scoreFaultB"
                     style="@style/ScoreCol"
-                    android:text="@string/scoreFaultB"
-                    android:textSize="@dimen/Text_size_goal" />
+                    android:text="@string/scoreFaultB" />
 
                 <TextView
                     android:id="@+id/scoreRedCardTeamB"
                     style="@style/ScoreCol"
-                    android:text="@string/scoreRedCardB"
-                    android:textSize="@dimen/Text_size_goal" />
+                    android:text="@string/scoreRedCardB" />
 
                 <TextView
                     android:id="@+id/scoreYellowCardTeamB"
                     style="@style/ScoreCol"
-                    android:text="@string/scoreYellowCardB"
-                    android:textSize="@dimen/Text_size_goal" />
+                    android:text="@string/scoreYellowCardB" />
 
             </LinearLayout>
 
@@ -187,32 +182,32 @@
                 android:orientation="vertical">
 
                 <Button
-                    style="@style/LayoutDefault"
+                    style="@style/LayoutButton"
                     android:onClick="addGoalTeamB"
                     android:text="@string/goalTeam" />
 
                 <Button
-                    style="@style/LayoutDefault"
+                    style="@style/LayoutButton"
                     android:onClick="addPenaltyTeamB"
                     android:text="@string/penaltyTeam" />
 
                 <Button
-                    style="@style/LayoutDefault"
+                    style="@style/LayoutButton"
                     android:onClick="addCornerTeamB"
                     android:text="@string/cornerTeam" />
 
                 <Button
-                    style="@style/LayoutDefault"
+                    style="@style/LayoutButton"
                     android:onClick="addFaultTeamB"
                     android:text="@string/faultTeam" />
 
                 <Button
-                    style="@style/LayoutDefault"
+                    style="@style/LayoutButton"
                     android:onClick="addRedCardTeamB"
                     android:text="@string/redCardTeam" />
 
                 <Button
-                    style="@style/LayoutDefault"
+                    style="@style/LayoutButton"
                     android:onClick="addYellowCardTeamB"
                     android:text="@string/yellowCardTeam" />
 
