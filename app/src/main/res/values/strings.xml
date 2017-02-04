@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ScoreKeeper</string>
-    <string name="teamA">type Team's name</string>
-    <string name="teamB">type Team's name</string>
+    <string name="teamA">type Team\'s name</string>
+    <string name="teamB">type Team\'s name</string>
     <string name="scoreTeamA">0</string>
     <string name="scoreTeamB">0</string>
     <string name="penaltyTeam">penalty</string>
