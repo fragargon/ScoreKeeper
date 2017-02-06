@@ -1,7 +1,7 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_vertical_margin">64dp</dimen>
-    <dimen name="Text_size_team">18sp</dimen>
+    <dimen name="Text_size_team">16sp</dimen>
     <dimen name="margin_vertical_col">8dp</dimen>
 
 </resources>

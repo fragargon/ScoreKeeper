@@ -1,247 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context="com.example.android.scorekeeper.MainActivity">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-    <ImageView
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/desc"
-        android:scaleType="centerCrop"
-        android:src="@drawable/pic" />
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        tools:context="com.example.android.scorekeeper.MainActivity">
 
-    <!--header-->
 
-    <LinearLayout
-        style="@style/LayoutDefault"
-        android:orientation="vertical">
+        <!--header-->
+
+        <LinearLayout
+            style="@style/LayoutDefault"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/LayoutDefault"
+                android:contentDescription="@string/desc"
+                android:scaleType="centerCrop"
+                android:src="@drawable/football_banner" />
+
+            <LinearLayout
+                style="@style/LayoutDefault"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/TeamA"
+                    style="@style/ScoreCol"
+                    android:layout_weight="1"
+                    android:hint="@string/teamA"
+                    android:textColorHint="#546E7A"
+                    android:textSize="@dimen/Text_size_team" />
+
+                <EditText
+                    android:id="@+id/TeamB"
+                    style="@style/ScoreCol"
+                    android:layout_weight="1"
+                    android:hint="@string/teamB"
+                    android:textColorHint="#546E7A"
+                    android:textSize="@dimen/Text_size_team" />
+            </LinearLayout>
+
+            <!-- first col button TeamA-->
+
+            <LinearLayout
+                style="@style/LayoutDefault"
+                android:layout_marginLeft="8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/LayoutDefault"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        style="@style/LayoutButton"
+                        android:onClick="addGoalTeamA"
+                        android:text="@string/goalTeam" />
+
+                    <Button
+                        style="@style/LayoutButton"
+                        android:onClick="addPenaltyTeamA"
+                        android:text="@string/penaltyTeam" />
+
+                    <Button
+                        style="@style/LayoutButton"
+                        android:onClick="addCornerTeamA"
+                        android:text="@string/cornerTeam" />
+
+                    <Button
+                        style="@style/LayoutButton"
+                        android:onClick="addFaultTeamA"
+                        android:text="@string/faultTeam" />
+
+                    <Button
+                        style="@style/LayoutButton"
+                        android:onClick="addRedCardTeamA"
+                        android:text="@string/redCardTeam" />
+
+                    <Button
+                        style="@style/LayoutButton"
+                        android:onClick="addYellowCardTeamA"
+                        android:text="@string/yellowCardTeam" />
+
+                </LinearLayout>
+
+                <!--second col score TeamA-->
+
+                <LinearLayout
+                    style="@style/LayoutDefault"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/scoreTeamA"
+                        style="@style/ScoreCol"
+                        android:text="@string/scoreTeamA" />
+
+                    <TextView
+                        android:id="@+id/scorePenaltyA"
+                        style="@style/ScoreCol"
+                        android:text="@string/scorePenaltyA" />
+
+                    <TextView
+                        android:id="@+id/scoreCornerA"
+                        style="@style/ScoreCol"
+                        android:text="@string/scoreCornerA" />
+
+                    <TextView
+                        android:id="@+id/scoreFaultA"
+                        style="@style/ScoreCol"
+                        android:text="@string/scoreFaultA" />
+
+                    <TextView
+                        android:id="@+id/scoreRedCardTeamA"
+                        style="@style/ScoreCol"
+                        android:text="@string/scoreRedCardA" />
+
+                    <TextView
+                        android:id="@+id/scoreYellowCardTeamA"
+                        style="@style/ScoreCol"
+                        android:text="@string/scoreYellowCardA" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black" />
+
+
+                <!--third col score TeamB-->
+
+                <LinearLayout
+                    style="@style/LayoutDefault"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/scoreTeamB"
+                        style="@style/ScoreCol"
+                        android:text="@string/scoreTeamB" />
+
+                    <TextView
+                        android:id="@+id/scorePenaltyB"
+                        style="@style/ScoreCol"
+                        android:text="@string/scorePenaltyB" />
+
+                    <TextView
+                        android:id="@+id/scoreCornerB"
+                        style="@style/ScoreCol"
+                        android:text="@string/scoreCornerB" />
+
+                    <TextView
+                        android:id="@+id/scoreFaultB"
+                        style="@style/ScoreCol"
+                        android:text="@string/scoreFaultB" />
+
+                    <TextView
+                        android:id="@+id/scoreRedCardTeamB"
+                        style="@style/ScoreCol"
+                        android:text="@string/scoreRedCardB" />
+
+                    <TextView
+                        android:id="@+id/scoreYellowCardTeamB"
+                        style="@style/ScoreCol"
+                        android:text="@string/scoreYellowCardB" />
+
+                </LinearLayout>
+
+                <!--fourth col-->
+
+                <LinearLayout
+                    style="@style/LayoutDefault"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        style="@style/LayoutButton"
+                        android:onClick="addGoalTeamB"
+                        android:text="@string/goalTeam" />
+
+                    <Button
+                        style="@style/LayoutButton"
+                        android:onClick="addPenaltyTeamB"
+                        android:text="@string/penaltyTeam" />
+
+                    <Button
+                        style="@style/LayoutButton"
+                        android:onClick="addCornerTeamB"
+                        android:text="@string/cornerTeam" />
+
+                    <Button
+                        style="@style/LayoutButton"
+                        android:onClick="addFaultTeamB"
+                        android:text="@string/faultTeam" />
+
+                    <Button
+                        style="@style/LayoutButton"
+                        android:onClick="addRedCardTeamB"
+                        android:text="@string/redCardTeam" />
+
+                    <Button
+                        style="@style/LayoutButton"
+                        android:onClick="addYellowCardTeamB"
+                        android:text="@string/yellowCardTeam" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_vertical_col"
+                android:onClick="resetAllScore"
+                android:text="@string/reset" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/appname"
+            style="@style/ScoreCol"
+            android:text="@string/app_name"
+            android:textColor="@android:color/black"
+            android:textSize="48sp"
+            android:textStyle="bold" />
 
         <ImageView
-            style="@style/LayoutDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:contentDescription="@string/desc"
-            android:scaleType="center"
-            android:src="@drawable/football_banner" />
-
-        <LinearLayout
-            style="@style/LayoutDefault"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/TeamA"
-                style="@style/ScoreCol"
-                android:layout_weight="1"
-                android:hint="@string/teamA"
-                android:textColorHint="#546E7A"
-                android:textSize="@dimen/Text_size_team" />
-
-            <EditText
-                android:id="@+id/TeamB"
-                style="@style/ScoreCol"
-                android:layout_weight="1"
-                android:hint="@string/teamB"
-                android:textColorHint="#546E7A"
-                android:textSize="@dimen/Text_size_team" />
-        </LinearLayout>
-
-        <!-- first col button TeamA-->
-
-        <LinearLayout
-            style="@style/LayoutDefault"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                style="@style/LayoutDefault"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <Button
-                    style="@style/LayoutButton"
-                    android:onClick="addGoalTeamA"
-                    android:text="@string/goalTeam" />
-
-                <Button
-                    style="@style/LayoutButton"
-                    android:onClick="addPenaltyTeamA"
-                    android:text="@string/penaltyTeam" />
-
-                <Button
-                    style="@style/LayoutButton"
-                    android:onClick="addCornerTeamA"
-                    android:text="@string/cornerTeam" />
-
-                <Button
-                    style="@style/LayoutButton"
-                    android:onClick="addFaultTeamA"
-                    android:text="@string/faultTeam" />
-
-                <Button
-                    style="@style/LayoutButton"
-                    android:onClick="addRedCardTeamA"
-                    android:text="@string/redCardTeam" />
-
-                <Button
-                    style="@style/LayoutButton"
-                    android:onClick="addYellowCardTeamA"
-                    android:text="@string/yellowCardTeam" />
-
-            </LinearLayout>
-
-            <!--second col score TeamA-->
-
-            <LinearLayout
-                style="@style/LayoutDefault"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/scoreTeamA"
-                    style="@style/ScoreCol"
-                    android:text="@string/scoreTeamA" />
-
-                <TextView
-                    android:id="@+id/scorePenaltyA"
-                    style="@style/ScoreCol"
-                    android:text="@string/scorePenaltyA" />
-
-                <TextView
-                    android:id="@+id/scoreCornerA"
-                    style="@style/ScoreCol"
-                    android:text="@string/scoreCornerA" />
-
-                <TextView
-                    android:id="@+id/scoreFaultA"
-                    style="@style/ScoreCol"
-                    android:text="@string/scoreFaultA" />
-
-                <TextView
-                    android:id="@+id/scoreRedCardTeamA"
-                    style="@style/ScoreCol"
-                    android:text="@string/scoreRedCardA" />
-
-                <TextView
-                    android:id="@+id/scoreYellowCardTeamA"
-                    style="@style/ScoreCol"
-                    android:text="@string/scoreYellowCardA" />
-
-            </LinearLayout>
-
-            <View
-                android:id="@+id/divider"
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/black" />
+            android:src="@drawable/icone_ballon" />
 
 
-            <!--third col score TeamB-->
-
-            <LinearLayout
-                style="@style/LayoutDefault"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/scoreTeamB"
-                    style="@style/ScoreCol"
-                    android:text="@string/scoreTeamB" />
-
-                <TextView
-                    android:id="@+id/scorePenaltyB"
-                    style="@style/ScoreCol"
-                    android:text="@string/scorePenaltyB" />
-
-                <TextView
-                    android:id="@+id/scoreCornerB"
-                    style="@style/ScoreCol"
-                    android:text="@string/scoreCornerB" />
-
-                <TextView
-                    android:id="@+id/scoreFaultB"
-                    style="@style/ScoreCol"
-                    android:text="@string/scoreFaultB" />
-
-                <TextView
-                    android:id="@+id/scoreRedCardTeamB"
-                    style="@style/ScoreCol"
-                    android:text="@string/scoreRedCardB" />
-
-                <TextView
-                    android:id="@+id/scoreYellowCardTeamB"
-                    style="@style/ScoreCol"
-                    android:text="@string/scoreYellowCardB" />
-
-            </LinearLayout>
-
-            <!--fourth col-->
-
-            <LinearLayout
-                style="@style/LayoutDefault"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <Button
-                    style="@style/LayoutButton"
-                    android:onClick="addGoalTeamB"
-                    android:text="@string/goalTeam" />
-
-                <Button
-                    style="@style/LayoutButton"
-                    android:onClick="addPenaltyTeamB"
-                    android:text="@string/penaltyTeam" />
-
-                <Button
-                    style="@style/LayoutButton"
-                    android:onClick="addCornerTeamB"
-                    android:text="@string/cornerTeam" />
-
-                <Button
-                    style="@style/LayoutButton"
-                    android:onClick="addFaultTeamB"
-                    android:text="@string/faultTeam" />
-
-                <Button
-                    style="@style/LayoutButton"
-                    android:onClick="addRedCardTeamB"
-                    android:text="@string/redCardTeam" />
-
-                <Button
-                    style="@style/LayoutButton"
-                    android:onClick="addYellowCardTeamB"
-                    android:text="@string/yellowCardTeam" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/margin_vertical_col"
-        android:onClick="resetAllScore"
-        android:text="@string/reset" />
-
-    <TextView
-        android:id="@+id/appname"
-        style="@style/ScoreCol"
-        android:text="@string/app_name"
-        android:textColor="@android:color/black"
-        android:textSize="64sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:contentDescription="@string/desc"
-        android:src="@drawable/icone_ballon" />
-
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
 

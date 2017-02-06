@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
+import static com.example.android.scorekeeper.R.id.TeamA;
+import static com.example.android.scorekeeper.R.id.TeamB;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,14 +30,71 @@ public class MainActivity extends AppCompatActivity {
     int scoreYellowCardA = 0;
     int scoreYellowCardB = 0;
 
+    /**
+     * save instance in case portrait/landscape mode
+     */
+
+    @Override
+    protected void onSaveInstanceState(Bundle oustate) {
+        oustate.putInt("scoreA", scoreTeamA);
+        oustate.putInt("scoreB", scoreTeamB);
+        oustate.putInt("penaltyA", scorePenaltyA);
+        oustate.putInt("penaltyB", scorePenaltyB);
+        oustate.putInt("cornerA", scoreCornerA);
+        oustate.putInt("cornerB", scoreCornerB);
+        oustate.putInt("faultA", scoreFaultA);
+        oustate.putInt("faultB", scoreFaultB);
+        oustate.putInt("rcA", scoreRedCardA);
+        oustate.putInt("rcB", scoreRedCardB);
+        oustate.putInt("ycA", scoreYellowCardA);
+        oustate.putInt("ycB", scoreYellowCardB);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String userInputText="";
+        /**
+         * load save instance score
+         */
+        if (savedInstanceState != null) {
+            scoreTeamA = savedInstanceState.getInt("scoreA");
+            scoreTeamB = savedInstanceState.getInt("scoreB");
+            scorePenaltyA = savedInstanceState.getInt("penaltyA");
+            scorePenaltyB = savedInstanceState.getInt("penaltyB");
+            scoreCornerA = savedInstanceState.getInt("cornerA");
+            scoreCornerB = savedInstanceState.getInt("cornerB");
+            scoreFaultA = savedInstanceState.getInt("faultA");
+            scoreFaultB = savedInstanceState.getInt("faultB");
+            scoreRedCardB = savedInstanceState.getInt("rcA");
+            scoreRedCardB = savedInstanceState.getInt("rcB");
+            scoreYellowCardA = savedInstanceState.getInt("ycA");
+            scoreYellowCardB = savedInstanceState.getInt("ycB");
+
+
+        }
+
+        displayScoreTeamA(scoreTeamA);
+        displayScoreTeamB(scoreTeamB);
+        displayScorePenaltyA(scorePenaltyA);
+        displayScorePenaltyB(scorePenaltyB);
+        displayScoreCornerA(scoreCornerA);
+        displayScoreCornerB(scoreCornerB);
+        displayScoreFaultA(scoreFaultA);
+        displayScoreFaultB(scoreFaultB);
+        displayScoreRedCardA(scoreRedCardA);
+        displayScoreRedCardB(scoreRedCardB);
+        displayScoreYellowCardA(scoreYellowCardA);
+        displayScoreYellowCardB(scoreYellowCardB);
+
+        /**
+         * Set Teams name
+         */
+
+        String userInputText = "";
         //Define myEditableText TeamA and TeamB
-        EditText myTeamA = (EditText) findViewById(R.id.TeamA);
+        EditText myTeamA = (EditText) findViewById(TeamA);
         EditText myTeamB = (EditText) findViewById(R.id.TeamB);
         //get myEditableText() input and convert it to string, store on userInputText
         userInputText = myTeamA.getText().toString();
@@ -268,5 +327,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreRedCardB(scoreRedCardB);
         displayScoreYellowCardA(scoreYellowCardA);
         displayScoreYellowCardB(scoreYellowCardB);
+        EditText myTeamA = (EditText) findViewById(TeamA);
+        myTeamA.setText("");
+        EditText myTeamB = (EditText) findViewById(R.id.TeamB);
+        myTeamB.setText("");
     }
 }

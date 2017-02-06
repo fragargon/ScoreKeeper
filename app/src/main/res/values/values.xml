@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary_material_light">#f5f5f5</color>
-    <color name="primary_dark_material_light">#757575</color>
-    <color name="background_material_light">#fafafa</color>
-    <color name="foreground_material_light">#000000</color>
 
     <style name="ScoreCol" parent="@android:style/TextAppearance">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">#212121</item>
-        <item name="android:textSize">40sp</item></style>
+        <item name="android:textSize">36sp</item>
+    </style>
 
     <style name="LayoutDefault" parent="@android:style/TextAppearance">
-         <item name="android:layout_width">match_parent</item>
-         <item name="android:layout_height">wrap_content</item></style>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 
     <style name="LayoutButton" parent="@android:style/TextAppearance">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">14sp</item></style>
+        <item name="android:textSize">12sp</item>
+    </style>
+
 </resources>

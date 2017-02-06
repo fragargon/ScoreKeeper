@@ -8,8 +8,7 @@
 
     </style>
 
-    <style name="Theme.AppCompat.Light.NoActionBar.ScoreKeeper" parent="Theme.AppCompat.Light.NoActionBar" >
-        <item name="colorAccent">@android:color/holo_blue_bright</item>
+    <style name="Theme.AppCompat.Light.NoActionBar.ScoreKeeper" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Background color of buttons in the app -->
         <item name="colorButtonNormal">#424242</item>
     </style>
