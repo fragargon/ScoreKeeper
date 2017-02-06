@@ -26,24 +26,23 @@
                 android:src="@drawable/football_banner" />
 
             <LinearLayout
+                android:id="@+id/textTeam"
                 style="@style/LayoutDefault"
                 android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/TeamA"
-                    style="@style/ScoreCol"
+                    style="@style/Name"
                     android:layout_weight="1"
                     android:hint="@string/teamA"
-                    android:textColorHint="#546E7A"
-                    android:textSize="@dimen/Text_size_team" />
+                    android:textColorHint="#546E7A" />
 
                 <EditText
                     android:id="@+id/TeamB"
-                    style="@style/ScoreCol"
+                    style="@style/Name"
                     android:layout_weight="1"
                     android:hint="@string/teamB"
-                    android:textColorHint="#546E7A"
-                    android:textSize="@dimen/Text_size_team" />
+                    android:textColorHint="#546E7A" />
             </LinearLayout>
 
             <!-- first col button TeamA-->

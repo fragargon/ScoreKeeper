@@ -4,11 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
+import static android.os.Build.VERSION_CODES.M;
 import static com.example.android.scorekeeper.R.id.TeamA;
 import static com.example.android.scorekeeper.R.id.TeamB;
+import static com.example.android.scorekeeper.R.id.textTeam;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle oustate) {
+        super.onSaveInstanceState(oustate);
         oustate.putInt("scoreA", scoreTeamA);
         oustate.putInt("scoreB", scoreTeamB);
         oustate.putInt("penaltyA", scorePenaltyA);
@@ -56,7 +60,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /**
-         * load save instance score
+         * Set Teams name
+         */
+
+        LinearLayout aLinearLayout = (LinearLayout) findViewById(R.id.textTeam);
+        EditText TeamA = new EditText(this.getApplicationContext());
+        TeamA.setId(textTeam);
+        aLinearLayout.addView(TeamA);
+
+        LinearLayout bLinearLayout = (LinearLayout) findViewById(R.id.textTeam);
+        EditText TeamB = new EditText(this.getApplicationContext());
+        TeamA.setId(textTeam);
+        bLinearLayout.addView(TeamB);
+
+        /**
+         * save instance score
          */
         if (savedInstanceState != null) {
             scoreTeamA = savedInstanceState.getInt("scoreA");
@@ -87,18 +105,6 @@ public class MainActivity extends AppCompatActivity {
         displayScoreRedCardB(scoreRedCardB);
         displayScoreYellowCardA(scoreYellowCardA);
         displayScoreYellowCardB(scoreYellowCardB);
-
-        /**
-         * Set Teams name
-         */
-
-        String userInputText = "";
-        //Define myEditableText TeamA and TeamB
-        EditText myTeamA = (EditText) findViewById(TeamA);
-        EditText myTeamB = (EditText) findViewById(R.id.TeamB);
-        //get myEditableText() input and convert it to string, store on userInputText
-        userInputText = myTeamA.getText().toString();
-        userInputText = myTeamB.getText().toString();
     }
 
     /**
