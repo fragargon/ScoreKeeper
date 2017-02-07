@@ -26,7 +26,6 @@
                 android:src="@drawable/football_banner" />
 
             <LinearLayout
-                android:id="@+id/textTeam"
                 style="@style/LayoutDefault"
                 android:orientation="horizontal">
 
