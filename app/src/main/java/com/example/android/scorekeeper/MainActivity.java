@@ -328,9 +328,7 @@ public class MainActivity extends AppCompatActivity {
         displayScoreRedCardB(scoreRedCardB);
         displayScoreYellowCardA(scoreYellowCardA);
         displayScoreYellowCardB(scoreYellowCardB);
-        EditText myTeamA = (EditText) findViewById(TeamA);
-        myTeamA.setText("");
-        EditText myTeamB = (EditText) findViewById(R.id.TeamB);
-        myTeamB.setText("");
+        teamA.setText("");
+        teamB.setText("");
     }
 }
