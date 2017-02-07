@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     int scoreTeamB = 0;
     int scoreYellowCardA = 0;
     int scoreYellowCardB = 0;
+    EditText teamA;
+    EditText teamB;
 
     /**
      * save instance in case portrait/landscape mode
@@ -52,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         oustate.putInt("rcB", scoreRedCardB);
         oustate.putInt("ycA", scoreYellowCardA);
         oustate.putInt("ycB", scoreYellowCardB);
+        oustate.putString("teamAName", teamA.getText().toString());
+        oustate.putString("teamBName", teamB.getText().toString());
     }
 
     @Override
@@ -59,19 +63,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        teamA = (EditText) findViewById(R.id.TeamA);
+        teamB = (EditText) findViewById(R.id.TeamB);
+
         /**
          * Set Teams name
          */
 
-        LinearLayout aLinearLayout = (LinearLayout) findViewById(R.id.textTeam);
-        EditText TeamA = new EditText(this.getApplicationContext());
-        TeamA.setId(textTeam);
-        aLinearLayout.addView(TeamA);
+        //LinearLayout aLinearLayout = (LinearLayout) findViewById(R.id.textTeam);
+        //EditText TeamA = new EditText(this.getApplicationContext());
+        //TeamA.setId(textTeam);
+        //aLinearLayout.addView(TeamA);
 
-        LinearLayout bLinearLayout = (LinearLayout) findViewById(R.id.textTeam);
-        EditText TeamB = new EditText(this.getApplicationContext());
-        TeamA.setId(textTeam);
-        bLinearLayout.addView(TeamB);
+        //LinearLayout bLinearLayout = (LinearLayout) findViewById(R.id.textTeam);
+        //EditText TeamB = new EditText(this.getApplicationContext());
+        //TeamA.setId(textTeam);
+        //bLinearLayout.addView(TeamB);
 
         /**
          * save instance score
@@ -89,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
             scoreRedCardB = savedInstanceState.getInt("rcB");
             scoreYellowCardA = savedInstanceState.getInt("ycA");
             scoreYellowCardB = savedInstanceState.getInt("ycB");
+            teamA.setText(savedInstanceState.getString("teamAName"));
+            teamB.setText(savedInstanceState.getString("teamBName"));
 
 
         }
