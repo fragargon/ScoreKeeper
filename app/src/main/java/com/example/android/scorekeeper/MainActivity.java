@@ -1,12 +1,14 @@
 package com.example.android.scorekeeper;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import static com.example.android.scorekeeper.R.id.TeamA;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
+import static com.example.android.scorekeeper.R.id.TeamA;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -63,7 +65,10 @@ public class MainActivity extends AppCompatActivity {
          */
 
         teamA = (EditText) findViewById(R.id.TeamA);
+        teamA.setTextColor(Color.WHITE);
         teamB = (EditText) findViewById(R.id.TeamB);
+        teamB.setTextColor(Color.WHITE);
+
 
 
         /**
