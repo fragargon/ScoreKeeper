@@ -26,6 +26,7 @@
     <style name="LayoutButton" parent="@android:style/TextAppearance">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/round_rect_shape</item>
         <item name="android:layout_marginBottom">16sp</item>
         <item name="android:textSize">10sp</item>
         <item name="android:textColor">#FFFFFF</item>
