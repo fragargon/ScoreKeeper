@@ -1,14 +1,11 @@
 package com.example.android.scorekeeper;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
-import static com.example.android.scorekeeper.R.id.TeamA;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     EditText teamB;
 
     /**
-     * save instance in case portrait/landscape mode
+     * save instance in case change portrait/landscape mode
      */
 
     @Override
@@ -61,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /**
-         * Set Teams name
+         * Set Teams name color text and disable focus on it
          */
 
         teamA = (EditText) findViewById(R.id.TeamA);
@@ -70,9 +67,8 @@ public class MainActivity extends AppCompatActivity {
         teamB.setTextColor(Color.WHITE);
 
 
-
         /**
-         * save instance score
+         * save instance score in case orientation change
          */
         if (savedInstanceState != null) {
             scoreTeamA = savedInstanceState.getInt("scoreA");
@@ -190,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Display corner for TeamA
+     * Display score corner for TeamA
      */
     public void displayScoreCornerA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.scoreCornerA);
@@ -207,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Display corner for TeamB
+     * Display score corner for TeamB
      */
     public void displayScoreCornerB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.scoreCornerB);
@@ -224,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Display fault for TeamA
+     * Display score fault for TeamA
      */
     public void displayScoreFaultA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.scoreFaultA);
@@ -292,7 +288,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * display yellowCard for TeamA
+     * Display yellowCard for TeamA
      */
     public void displayScoreYellowCardA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.scoreYellowCardTeamA);
@@ -309,7 +305,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * display yellowCard for TeamB
+     * Display yellowCard for TeamB
      */
     public void displayScoreYellowCardB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.scoreYellowCardTeamB);
