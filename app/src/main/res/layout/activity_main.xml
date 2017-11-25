@@ -22,11 +22,18 @@
             android:scaleY="1"
             android:src="@drawable/output" />
 
-        <!--header-->
+        <TextView
+            android:id="@+id/appname"
+            style="@style/NameApp"
+            android:text="@string/app_name" />
+
+        <!-- header -->
 
         <LinearLayout
             style="@style/LayoutDefault"
             android:orientation="vertical">
+
+            <!-- layout teams name -->
 
 
             <LinearLayout
@@ -54,13 +61,16 @@
                     android:hint="@string/teamB" />
             </LinearLayout>
 
-            <!-- first col button TeamA-->
+            <!-- layout score and button -->
+
 
             <LinearLayout
                 style="@style/LayoutDefault"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:orientation="horizontal">
+
+                <!-- first col button TeamA -->
 
                 <LinearLayout
                     style="@style/LayoutDefault"
@@ -99,7 +109,7 @@
 
                 </LinearLayout>
 
-                <!--second col score TeamA-->
+                <!-- second col score TeamA -->
 
                 <LinearLayout
                     style="@style/LayoutDefault"
@@ -145,7 +155,7 @@
                     android:background="@android:color/holo_orange_dark" />
 
 
-                <!--third col score TeamB-->
+                <!-- third col score TeamB -->
 
                 <LinearLayout
                     style="@style/LayoutDefault"
@@ -184,7 +194,7 @@
 
                 </LinearLayout>
 
-                <!--fourth col-->
+                <!-- fourth col button TeamB -->
 
                 <LinearLayout
                     style="@style/LayoutDefault"
@@ -227,6 +237,8 @@
 
             </LinearLayout>
 
+            <!-- reset button -->
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -238,12 +250,6 @@
                 android:textColor="@android:color/holo_orange_dark" />
 
         </LinearLayout>
-
-
-        <TextView
-            android:id="@+id/appname"
-            style="@style/NameApp"
-            android:text="@string/app_name" />
 
 
     </RelativeLayout>
