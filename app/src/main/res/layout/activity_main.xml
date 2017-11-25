@@ -53,7 +53,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/margin_vertical8"
                     android:contentDescription="@string/desc"
                     android:src="@drawable/tr_icone_ballon" />
 
@@ -69,8 +69,6 @@
 
             <LinearLayout
                 style="@style/LayoutDefault"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
                 android:orientation="horizontal">
 
                 <!-- first col button TeamA -->
@@ -201,8 +199,6 @@
 
                 <LinearLayout
                     style="@style/LayoutDefault"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -246,7 +242,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/margin_vertical_col"
                 android:background="@drawable/round_rect_shape"
                 android:onClick="resetAllScore"
                 android:text="@string/reset"
