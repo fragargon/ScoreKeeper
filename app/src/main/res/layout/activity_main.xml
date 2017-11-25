@@ -11,7 +11,8 @@
 
 
     <RelativeLayout
-        style="@style/LayoutDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/background">
 
         <ImageView
@@ -30,7 +31,9 @@
         <!-- header -->
 
         <LinearLayout
-            style="@style/LayoutDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <!-- layout teams name -->
