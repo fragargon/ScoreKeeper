@@ -70,9 +70,10 @@
     <style name="NameAppLandscape" parent="@android:style/TextAppearance">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">16dp</item>
-        <item name="android:layout_marginLeft">135dp</item>
         <item name="android:layout_marginBottom">14dp</item>
         <item name="android:background">@drawable/round_rect_shape</item>
         <item name="android:gravity">center</item>
