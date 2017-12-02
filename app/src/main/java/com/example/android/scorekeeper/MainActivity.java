@@ -11,6 +11,25 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     /**
+     * Define constant key to store the score value on configuration change
+     */
+
+    public static final String KEY_SCORE_A = "scoreA";
+    public static final String KEY_SCORE_B = "scoreB";
+    public static final String KEY_PENALTY_A = "penaltyA";
+    public static final String KEY_PENALTY_B = "penaltyB";
+    public static final String KEY_CORNER_A = "cornerA";
+    public static final String KEY_CORNER_B = "cornerB";
+    public static final String KEY_FAULT_A = "faultA";
+    public static final String KEY_FAULT_B = "faultB";
+    public static final String KEY_RCA = "rcA";
+    public static final String KEY_RCB = "rcB";
+    public static final String KEY_YCA = "ycA";
+    public static final String KEY_YCB = "ycB";
+    public static final String KEY_TEAM_NAME_A = "teamAName";
+    public static final String KEY_TEAM_NAME_B = "teamBName";
+
+    /**
      * Define a String Variable for User Input
      */
 
@@ -36,20 +55,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle oustate) {
         super.onSaveInstanceState(oustate);
-        oustate.putInt("scoreA", scoreTeamA);
-        oustate.putInt("scoreB", scoreTeamB);
-        oustate.putInt("penaltyA", scorePenaltyA);
-        oustate.putInt("penaltyB", scorePenaltyB);
-        oustate.putInt("cornerA", scoreCornerA);
-        oustate.putInt("cornerB", scoreCornerB);
-        oustate.putInt("faultA", scoreFaultA);
-        oustate.putInt("faultB", scoreFaultB);
-        oustate.putInt("rcA", scoreRedCardA);
-        oustate.putInt("rcB", scoreRedCardB);
-        oustate.putInt("ycA", scoreYellowCardA);
-        oustate.putInt("ycB", scoreYellowCardB);
-        oustate.putString("teamAName", teamA.getText().toString());
-        oustate.putString("teamBName", teamB.getText().toString());
+        oustate.putInt(KEY_SCORE_A, scoreTeamA);
+        oustate.putInt(KEY_SCORE_B, scoreTeamB);
+        oustate.putInt(KEY_PENALTY_A, scorePenaltyA);
+        oustate.putInt(KEY_PENALTY_B, scorePenaltyB);
+        oustate.putInt(KEY_CORNER_A, scoreCornerA);
+        oustate.putInt(KEY_CORNER_B, scoreCornerB);
+        oustate.putInt(KEY_FAULT_A, scoreFaultA);
+        oustate.putInt(KEY_FAULT_B, scoreFaultB);
+        oustate.putInt(KEY_RCA, scoreRedCardA);
+        oustate.putInt(KEY_RCB, scoreRedCardB);
+        oustate.putInt(KEY_YCA, scoreYellowCardA);
+        oustate.putInt(KEY_YCB, scoreYellowCardB);
+        oustate.putString(KEY_TEAM_NAME_A, teamA.getText().toString());
+        oustate.putString(KEY_TEAM_NAME_B, teamB.getText().toString());
     }
 
     @Override
@@ -71,20 +90,20 @@ public class MainActivity extends AppCompatActivity {
          * save instance score in case orientation change
          */
         if (savedInstanceState != null) {
-            scoreTeamA = savedInstanceState.getInt("scoreA");
-            scoreTeamB = savedInstanceState.getInt("scoreB");
-            scorePenaltyA = savedInstanceState.getInt("penaltyA");
-            scorePenaltyB = savedInstanceState.getInt("penaltyB");
-            scoreCornerA = savedInstanceState.getInt("cornerA");
-            scoreCornerB = savedInstanceState.getInt("cornerB");
-            scoreFaultA = savedInstanceState.getInt("faultA");
-            scoreFaultB = savedInstanceState.getInt("faultB");
-            scoreRedCardB = savedInstanceState.getInt("rcA");
-            scoreRedCardB = savedInstanceState.getInt("rcB");
-            scoreYellowCardA = savedInstanceState.getInt("ycA");
-            scoreYellowCardB = savedInstanceState.getInt("ycB");
-            teamA.setText(savedInstanceState.getString("teamAName"));
-            teamB.setText(savedInstanceState.getString("teamBName"));
+            scoreTeamA = savedInstanceState.getInt(KEY_SCORE_A);
+            scoreTeamB = savedInstanceState.getInt(KEY_SCORE_B);
+            scorePenaltyA = savedInstanceState.getInt(KEY_PENALTY_A);
+            scorePenaltyB = savedInstanceState.getInt(KEY_PENALTY_B);
+            scoreCornerA = savedInstanceState.getInt(KEY_CORNER_A);
+            scoreCornerB = savedInstanceState.getInt(KEY_CORNER_B);
+            scoreFaultA = savedInstanceState.getInt(KEY_FAULT_A);
+            scoreFaultB = savedInstanceState.getInt(KEY_FAULT_B);
+            scoreRedCardB = savedInstanceState.getInt(KEY_RCA);
+            scoreRedCardB = savedInstanceState.getInt(KEY_RCB);
+            scoreYellowCardA = savedInstanceState.getInt(KEY_YCA);
+            scoreYellowCardB = savedInstanceState.getInt(KEY_YCB);
+            teamA.setText(savedInstanceState.getString(KEY_TEAM_NAME_A));
+            teamB.setText(savedInstanceState.getString(KEY_TEAM_NAME_B));
 
 
         }
