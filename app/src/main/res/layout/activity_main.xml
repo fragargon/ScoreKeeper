@@ -48,7 +48,7 @@
                     android:id="@+id/TeamA"
                     style="@style/NameTeam"
                     android:layout_weight="1"
-                    android:hint="@string/teamA" />
+                    android:hint="@string/teamName" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -61,7 +61,7 @@
                     android:id="@+id/TeamB"
                     style="@style/NameTeam"
                     android:layout_weight="1"
-                    android:hint="@string/teamB" />
+                    android:hint="@string/teamName" />
             </LinearLayout>
 
             <!-- layout score and button -->

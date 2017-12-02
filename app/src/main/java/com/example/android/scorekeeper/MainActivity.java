@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     /**
-     * Define a String Variable for storing User Input
+     * Define a String Variable for User Input
      */
 
     int scoreCornerA = 0;
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /**
-         * Set Teams name color text and disable focus on it
+         * Set Teams name color text
          */
 
         teamA = (EditText) findViewById(R.id.TeamA);
