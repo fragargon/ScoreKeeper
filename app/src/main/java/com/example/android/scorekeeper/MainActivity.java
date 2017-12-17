@@ -3,16 +3,16 @@ package com.example.android.scorekeeper;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    /**
-     * Define constant key to store the score value on configuration change
-     */
+    //Define constant key to store the score value on configuration change
 
     public static final String KEY_SCORE_A = "scoreA";
     public static final String KEY_SCORE_B = "scoreB";
@@ -29,9 +29,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String KEY_TEAM_NAME_A = "teamAName";
     public static final String KEY_TEAM_NAME_B = "teamBName";
 
-    /**
-     * Define a String Variable for User Input
-     */
+    //Define a String Variable for User Input
 
     int scoreCornerA = 0;
     int scoreCornerB = 0;
@@ -49,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
     EditText teamB;
 
     /**
-     * save instance in case change portrait/landscape mode
+     * @param outState  in case change portrait/landscape mode
+     *                  save variable in CONSTANT KEYS
      */
 
     @Override
@@ -71,14 +70,21 @@ public class MainActivity extends AppCompatActivity {
         outState.putString(KEY_TEAM_NAME_B, teamB.getText().toString());
     }
 
+    /**
+     *
+     * @param savedInstanceState Create MainActivity
+     *                           set text, Color, clear the Focus and remove cursor visibility on editText
+     *                           set OnClickListener if empty shows a Toast message
+     *                           get the saved Constant Key if configuration change
+     *                           Display the Scores
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /**
-         * Set Teams Name, color text, Clear Focus and Cursor on EditText
-         */
+        //Set Teams Name, color text, Clear Focus and Cursor on EditText
 
         teamA = (EditText) findViewById(R.id.TeamA);
         teamA.setTextColor(Color.WHITE);
@@ -89,9 +95,32 @@ public class MainActivity extends AppCompatActivity {
         teamB.clearFocus();
         teamB.setCursorVisible(false);
 
-        /**
-         * save instance score in case orientation change
-         */
+        //Hide Keyboard on EditText TeamA when Activity starts
+
+        teamA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Editable etA = teamA.getText();
+                if (etA.toString().isEmpty()) {
+                    Toast.makeText(MainActivity.this, getString(R.string.teamName), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        //Hide Keyboard on EditText TeamB when Activity starts
+
+        teamB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Editable etB = teamB.getText();
+                if (etB.toString().isEmpty()) {
+                    Toast.makeText(MainActivity.this, getString(R.string.teamName), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        //save instance score in case orientation change
+
         if (savedInstanceState != null) {
             scoreTeamA = savedInstanceState.getInt(KEY_SCORE_A);
             scoreTeamB = savedInstanceState.getInt(KEY_SCORE_B);
