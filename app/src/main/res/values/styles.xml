@@ -1,14 +1,8 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar.ScoreKeeper">
-        <!-- Customize your theme here. -->
-        <item name="android:textColorPrimary">@android:color/darker_gray</item>
-        <item name="colorAccent">@android:color/holo_orange_dark</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" />
 
-    </style>
-
-    <style name="Theme.AppCompat.Light.NoActionBar.ScoreKeeper" parent="Theme.AppCompat.Light.NoActionBar.ScoreKeeper">
-    </style>
+    <style name="Theme">Theme</style>
 
 </resources>

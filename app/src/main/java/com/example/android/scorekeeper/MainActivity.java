@@ -1,9 +1,11 @@
 package com.example.android.scorekeeper;
 
+import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -77,13 +79,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /**
-         * Set Teams name color text
+         *  Hide Keyboard when Activity starts
+         */
+
+        InputMethodManager imm =(InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
+
+        /**
+         * Set Teams Name, color text, Clear Focus and Cursor on EditText
          */
 
         teamA = (EditText) findViewById(R.id.TeamA);
         teamA.setTextColor(Color.WHITE);
+        teamA.clearFocus();
+        teamA.setCursorVisible(false);
         teamB = (EditText) findViewById(R.id.TeamB);
         teamB.setTextColor(Color.WHITE);
+        teamB.clearFocus();
+        teamB.setCursorVisible(false);
 
 
         /**
