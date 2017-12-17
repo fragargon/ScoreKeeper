@@ -1,11 +1,9 @@
 package com.example.android.scorekeeper;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -55,35 +53,28 @@ public class MainActivity extends AppCompatActivity {
      */
 
     @Override
-    protected void onSaveInstanceState(Bundle oustate) {
-        super.onSaveInstanceState(oustate);
-        oustate.putInt(KEY_SCORE_A, scoreTeamA);
-        oustate.putInt(KEY_SCORE_B, scoreTeamB);
-        oustate.putInt(KEY_PENALTY_A, scorePenaltyA);
-        oustate.putInt(KEY_PENALTY_B, scorePenaltyB);
-        oustate.putInt(KEY_CORNER_A, scoreCornerA);
-        oustate.putInt(KEY_CORNER_B, scoreCornerB);
-        oustate.putInt(KEY_FAULT_A, scoreFaultA);
-        oustate.putInt(KEY_FAULT_B, scoreFaultB);
-        oustate.putInt(KEY_RCA, scoreRedCardA);
-        oustate.putInt(KEY_RCB, scoreRedCardB);
-        oustate.putInt(KEY_YCA, scoreYellowCardA);
-        oustate.putInt(KEY_YCB, scoreYellowCardB);
-        oustate.putString(KEY_TEAM_NAME_A, teamA.getText().toString());
-        oustate.putString(KEY_TEAM_NAME_B, teamB.getText().toString());
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY_SCORE_A, scoreTeamA);
+        outState.putInt(KEY_SCORE_B, scoreTeamB);
+        outState.putInt(KEY_PENALTY_A, scorePenaltyA);
+        outState.putInt(KEY_PENALTY_B, scorePenaltyB);
+        outState.putInt(KEY_CORNER_A, scoreCornerA);
+        outState.putInt(KEY_CORNER_B, scoreCornerB);
+        outState.putInt(KEY_FAULT_A, scoreFaultA);
+        outState.putInt(KEY_FAULT_B, scoreFaultB);
+        outState.putInt(KEY_RCA, scoreRedCardA);
+        outState.putInt(KEY_RCB, scoreRedCardB);
+        outState.putInt(KEY_YCA, scoreYellowCardA);
+        outState.putInt(KEY_YCB, scoreYellowCardB);
+        outState.putString(KEY_TEAM_NAME_A, teamA.getText().toString());
+        outState.putString(KEY_TEAM_NAME_B, teamB.getText().toString());
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        /**
-         *  Hide Keyboard when Activity starts
-         */
-
-        InputMethodManager imm =(InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
 
         /**
          * Set Teams Name, color text, Clear Focus and Cursor on EditText
@@ -97,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
         teamB.setTextColor(Color.WHITE);
         teamB.clearFocus();
         teamB.setCursorVisible(false);
-
 
         /**
          * save instance score in case orientation change
