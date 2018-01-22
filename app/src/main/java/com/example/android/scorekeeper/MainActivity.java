@@ -46,6 +46,21 @@ public class MainActivity extends AppCompatActivity {
     EditText teamA;
     EditText teamB;
 
+    // Define variable to instantiate the ID views
+
+    public TextView scoreViewTa;
+    public TextView scoreViewTb;
+    public TextView scoreViewPa;
+    public TextView scoreViewPb;
+    public TextView scoreViewCa;
+    public TextView scoreViewCb;
+    public TextView scoreViewFa;
+    public TextView scoreViewFb;
+    public TextView scoreViewRca;
+    public TextView scoreViewRcb;
+    public TextView scoreViewYca;
+    public TextView scoreViewYcb;
+
     /**
      * @param outState  in case change portrait/landscape mode
      *                  save variable in CONSTANT KEYS
@@ -83,6 +98,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // instantiate the Id Views
+
+        scoreViewTa = (TextView) findViewById(R.id.scoreTeamA);
+        scoreViewTb = (TextView) findViewById(R.id.scoreTeamB);
+        scoreViewPa = (TextView) findViewById(R.id.scorePenaltyA);
+        scoreViewPb = (TextView) findViewById(R.id.scorePenaltyB);
+        scoreViewCa = (TextView) findViewById(R.id.scoreCornerA);
+        scoreViewCb = (TextView) findViewById(R.id.scoreCornerB);
+        scoreViewFa = (TextView) findViewById(R.id.scoreFaultA);
+        scoreViewFb = (TextView) findViewById(R.id.scoreFaultB);
+        scoreViewRca = (TextView) findViewById(R.id.scoreRedCardTeamA);
+        scoreViewRcb = (TextView) findViewById(R.id.scoreRedCardTeamB);
+        scoreViewYca = (TextView) findViewById(R.id.scoreYellowCardTeamA);
+        scoreViewYcb = (TextView) findViewById(R.id.scoreYellowCardTeamB);
 
         //Set Teams Name, color text, Clear Focus and Cursor on EditText
 
@@ -168,9 +198,8 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void displayScoreTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.scoreTeamA);
-        scoreView.setTextColor(Color.WHITE);
-        scoreView.setText(String.valueOf(score));
+        scoreViewTa.setTextColor(Color.WHITE);
+        scoreViewTa.setText(String.valueOf(score));
     }
 
     /**
@@ -187,9 +216,8 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void displayScoreTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.scoreTeamB);
-        scoreView.setTextColor(Color.WHITE);
-        scoreView.setText(String.valueOf(score));
+        scoreViewTb.setTextColor(Color.WHITE);
+        scoreViewTb.setText(String.valueOf(score));
     }
 
     /**
@@ -205,9 +233,8 @@ public class MainActivity extends AppCompatActivity {
      * Display the penalty for TeamA
      */
     public void displayScorePenaltyA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.scorePenaltyA);
-        scoreView.setTextColor(Color.WHITE);
-        scoreView.setText(String.valueOf(score));
+        scoreViewPa.setTextColor(Color.WHITE);
+        scoreViewPa.setText(String.valueOf(score));
     }
 
     /**
@@ -223,9 +250,8 @@ public class MainActivity extends AppCompatActivity {
      * Display the penalty for TeamB
      */
     public void displayScorePenaltyB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.scorePenaltyB);
-        scoreView.setTextColor(Color.WHITE);
-        scoreView.setText(String.valueOf(score));
+        scoreViewPb.setTextColor(Color.WHITE);
+        scoreViewPb.setText(String.valueOf(score));
     }
 
     /**
@@ -240,9 +266,8 @@ public class MainActivity extends AppCompatActivity {
      * Display score corner for TeamA
      */
     public void displayScoreCornerA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.scoreCornerA);
-        scoreView.setTextColor(Color.WHITE);
-        scoreView.setText(String.valueOf(score));
+        scoreViewCa.setTextColor(Color.WHITE);
+        scoreViewCa.setText(String.valueOf(score));
     }
 
     /**
@@ -257,9 +282,8 @@ public class MainActivity extends AppCompatActivity {
      * Display score corner for TeamB
      */
     public void displayScoreCornerB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.scoreCornerB);
-        scoreView.setTextColor(Color.WHITE);
-        scoreView.setText(String.valueOf(score));
+        scoreViewCb.setTextColor(Color.WHITE);
+        scoreViewCb.setText(String.valueOf(score));
     }
 
     /**
@@ -274,9 +298,8 @@ public class MainActivity extends AppCompatActivity {
      * Display score fault for TeamA
      */
     public void displayScoreFaultA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.scoreFaultA);
-        scoreView.setTextColor(Color.WHITE);
-        scoreView.setText(String.valueOf(score));
+        scoreViewFa.setTextColor(Color.WHITE);
+        scoreViewFa.setText(String.valueOf(score));
     }
 
     /**
@@ -291,9 +314,8 @@ public class MainActivity extends AppCompatActivity {
      * Display fault for TeamB
      */
     public void displayScoreFaultB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.scoreFaultB);
-        scoreView.setTextColor(Color.WHITE);
-        scoreView.setText(String.valueOf(score));
+        scoreViewFb.setTextColor(Color.WHITE);
+        scoreViewFb.setText(String.valueOf(score));
     }
 
     /**
@@ -308,9 +330,8 @@ public class MainActivity extends AppCompatActivity {
      * Display redCard for TeamA
      */
     public void displayScoreRedCardA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.scoreRedCardTeamA);
-        scoreView.setTextColor(Color.WHITE);
-        scoreView.setText(String.valueOf(score));
+        scoreViewRca.setTextColor(Color.WHITE);
+        scoreViewRca.setText(String.valueOf(score));
     }
 
     /**
@@ -325,9 +346,8 @@ public class MainActivity extends AppCompatActivity {
      * Display redCard for TeamB
      */
     public void displayScoreRedCardB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.scoreRedCardTeamB);
-        scoreView.setTextColor(Color.WHITE);
-        scoreView.setText(String.valueOf(score));
+        scoreViewRcb.setTextColor(Color.WHITE);
+        scoreViewRcb.setText(String.valueOf(score));
     }
 
     /**
@@ -342,9 +362,8 @@ public class MainActivity extends AppCompatActivity {
      * Display yellowCard for TeamA
      */
     public void displayScoreYellowCardA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.scoreYellowCardTeamA);
-        scoreView.setTextColor(Color.WHITE);
-        scoreView.setText(String.valueOf(score));
+        scoreViewYca.setTextColor(Color.WHITE);
+        scoreViewYca.setText(String.valueOf(score));
     }
 
     /**
@@ -359,9 +378,8 @@ public class MainActivity extends AppCompatActivity {
      * Display yellowCard for TeamB
      */
     public void displayScoreYellowCardB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.scoreYellowCardTeamB);
-        scoreView.setTextColor(Color.WHITE);
-        scoreView.setText(String.valueOf(score));
+        scoreViewYcb.setTextColor(Color.WHITE);
+        scoreViewYcb.setText(String.valueOf(score));
     }
 
     /**
