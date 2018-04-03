@@ -12,6 +12,6 @@ ____________
 
 Design and implement an app to track scores between two teams within a basketball game.
 
-![Alt Text](https://github.com/fragargon/BuzzinessCard/raw/master/scorekeeper_1.jpeg)
+![Alt Text](https://github.com/fragargon/ScoreKeeper/raw/master/scorekeeper_1.jpeg)
 
-![Alt Text](https://github.com/fragargon/BuzzinessCard/raw/master/scorekeeper_2.jpeg)
+![Alt Text](https://github.com/fragargon/ScoreKeeper/raw/master/scorekeeper_2.jpeg)
