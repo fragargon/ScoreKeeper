@@ -5,7 +5,7 @@
 ____________
 
 Android Basics: User Input
-Harness the power of Java to build a coffee-ordering app, use variables to add interactivity to your app, and learn the basics of object-oriented programming.
+Harness the power of Java to build a ScoreKeeper app, use variables to add interactivity to your app, and learn the basics of object-oriented programming.
 ____________
 
 #### Project Description
